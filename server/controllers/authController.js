@@ -125,7 +125,73 @@ export const registerUser = async (req, res) => {
 export const loginUser = async (req, res) => {
     try {
 
+        const { email, password } = req.body;
+
+        // Check required fields
+        if (!email || !password) {
+            return res.status(400).json({
+                success: false,
+                message: "Email and password are required.",
+            });
+        }
+
+        // Normalize email
+        const normalizedEmail = email.trim().toLowerCase();
+
+        // Find user by email
+        const user = await User.findOne({
+            email: normalizedEmail,
+        });
+
+        if (!user) {
+            return res.status(401).json({
+                success: false,
+                message: "Invalid email or password.",
+            });
+        }
+
+        // Verify password
+        const isPasswordMatched = await user.matchPassword(password);
+
+        if (!isPasswordMatched) {
+            return res.status(401).json({
+                success: false,
+                message: "Invalid email or password.",
+            });
+        }
+
+        // Generate JWT
+        const token = generateToken(user);
+
+        // Send success response
+        return res.status(200).json({
+            success: true,
+            message: "Login successful.",
+            token,
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+                phone: user.phone,
+                role: user.role,
+            },
+        });
+
     } catch (error) {
 
+        console.error(error);
+
+        return res.status(500).json({
+            success: false,
+            message: "Internal Server Error",
+        });
+
     }
+};
+
+export const getUserProfile = async (req, res) => {
+  return res.status(200).json({
+    success: true,
+    user: req.user,
+  });
 };
