@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
 
         {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-bold text-blue-600"
+          className="text-xl sm:text-2xl font-bold text-blue-600 text-center sm:text-left"
         >
           Restaurant Reservation
         </Link>
 
         {/* Navigation */}
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6">
 
           <Link
             to="/"

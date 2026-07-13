@@ -440,7 +440,7 @@ function AdminDashboard() {
 
       </div>
 
-      <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+      <div className="hidden md:block bg-white rounded-2xl shadow-md overflow-hidden">
 
         <div className="overflow-x-auto">
 

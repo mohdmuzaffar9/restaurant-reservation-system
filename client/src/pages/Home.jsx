@@ -4,20 +4,20 @@ function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-slate-100 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <section className="bg-slate-100 py-14 sm:py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-800">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-800">
             Restaurant <span className="text-blue-600">Reservation</span>
           </h1>
 
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-600 leading-8">
+          <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-slate-600 leading-8">
             Reserve your favorite table in just a few clicks.
             Enjoy fast, secure and hassle-free restaurant booking with
             smart table allocation.
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
 
             <Link
               to="/book-table"
@@ -40,17 +40,15 @@ function Home() {
 
       {/* Features */}
 
-      <section className="py-20 bg-white">
+      <section className="py-14 sm:py-16 md:py-20 bg-white">
 
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <h2 className="text-4xl font-bold text-center text-slate-800">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-slate-800">
             Why Choose Us?
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-
-            {/* Card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
 
             <div className="bg-slate-50 rounded-xl shadow-md p-8 text-center">
 
@@ -67,8 +65,6 @@ function Home() {
 
             </div>
 
-            {/* Card */}
-
             <div className="bg-slate-50 rounded-xl shadow-md p-8 text-center">
 
               <div className="text-5xl">📅</div>
@@ -83,8 +79,6 @@ function Home() {
               </p>
 
             </div>
-
-            {/* Card */}
 
             <div className="bg-slate-50 rounded-xl shadow-md p-8 text-center">
 
@@ -111,7 +105,7 @@ function Home() {
 
       <footer className="bg-slate-900 text-white py-8">
 
-        <div className="max-w-7xl mx-auto px-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
           <h3 className="text-xl font-semibold">
             Restaurant Reservation System
