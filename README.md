@@ -14,15 +14,17 @@ This project allows customers to book restaurant tables while providing administ
 
 **Live Website:**
 
-https://restaurant-reservation-system-mxwl373xl-mohammed-muzaffar.vercel.app/
+https://restaurant-reservation-system-nine-xi.vercel.app/
 
 ---
 
-Frontend:
-Coming Soon
+### 🔗 GitHub Repository
 
-Backend API:
-Coming Soon
+https://github.com/mohdmuzaffar9/restaurant-reservation-system.git
+
+### ⚙️ Backend API
+
+https://restaurant-reservation-backend-nc6b.onrender.com/
 
 # 🌟 Project Highlights
 
